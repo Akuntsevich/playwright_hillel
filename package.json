@@ -1,0 +1,22 @@
+{
+  "name": "playwright_hillel",
+  "version": "1.0.0",
+  "description": "Playwright + JS",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Akuntsevich/playwright_hillel.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Akuntsevich/playwright_hillel/issues"
+  },
+  "homepage": "https://github.com/Akuntsevich/playwright_hillel#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.46.1",
+    "@types/node": "^22.4.1"
+  }
+}
