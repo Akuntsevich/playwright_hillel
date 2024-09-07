@@ -1,5 +1,6 @@
 // @ts-check
 const { defineConfig, devices } = require('@playwright/test');
+import * as dotenv from 'dotenv';
 
 /**
  * Read environment variables from file.
@@ -13,6 +14,7 @@ require('dotenv').config({ path: path.resolve(__dirname, '.env') });
  */
 module.exports = defineConfig({
   testDir: './tests',
+  timeout: 30000,
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
@@ -38,11 +40,11 @@ module.exports = defineConfig({
       name: 'qauto',
       testMatch: '**/qauto.spec.js',
       use: {
-        headless: false,
-        baseURL: 'https://qauto.forstudy.space/',
+        //headless: false,
+        baseURL: process.env.BASE_URL,
         httpCredentials: {
-          username: process.env.USERNAME,
-          password: process.env.PASSWORD,
+          username: process.env.USER_NAME || 'defaultUsername',
+          password: process.env.USER_PASSWORD || 'defaultPassword',
         },
       },
     },
