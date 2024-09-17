@@ -15,7 +15,12 @@
     "@playwright/test": "^1.46.1",
     "@types/node": "^22.5.1"
   },
-  "scripts": {},
+  "scripts": {
+    "test": "npx playwright test",
+    "test:ui": "npx playwright test --ui",
+    "debug": "npx playwright test --debug",
+    "list": "npx playwright --list"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Akuntsevich/playwright_hillel.git"

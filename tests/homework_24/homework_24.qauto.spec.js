@@ -1,4 +1,5 @@
 import { test, expect } from '@playwright/test';
+import * as dotenv from 'dotenv';
 import casual from 'casual-browserify';
 import SIGNUP_FORM_ERRORS from '../../src/utils/constants';
 import mainUser from '../../src/test-data/credentials';
@@ -15,8 +16,8 @@ test.describe('Registration flow test suits with POM', () => {
    
     const uniqueEmail = casual.email;
     const loginPassword = mainUser.password;
-    const namep = process.env.USERNAME;
-    const passwordP = process.env.PASSWORD;
+    const namep = process.env.USER_NAME;
+    const passwordP = process.env.USER_PASSWORD;
 
     test.beforeEach(async ({ page }) => {
         outerHeader = new OuterHeader(page);
